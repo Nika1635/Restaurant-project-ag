@@ -1,0 +1,36 @@
+<section class="backgroundsection">
+    <h1>Fast and efficient, online ordering you must try.</h1>
+</section>
+<section class="main-cont">
+    <section class="categories-contaier">
+        <h1>Categories</h1>
+        <ul id="categories-list">
+        </ul>
+    </section>
+    <section class="products-cont">
+        <section class="filter-cont">
+            <form action="">
+                <p>Filter</p>
+                <div class="slider">
+                    <label for="spiciness" id="spicinesstext">Spiciness: Not Choosen</label>
+                    <input type="range" name="spiciness" id="spiciness" min="0" max="4" value="0">
+                </div>
+                <div class="check">
+                    <label for="nuts">No Nuts</label>
+                    <input type="checkbox" name="nuts" id="nuts">
+                </div>
+                <div class="check">
+                    <label for="vegetarian">vegetarian</label>
+                    <input type="checkbox" name="vegetarian" id="vegetarian">
+                </div>
+                <input type="reset">
+                <input type="submit">
+            </form>
+        </section>
+        <section id="products">
+            @for (item of products; track $index) {
+                
+            }
+        </section>
+    </section>
+</section>
