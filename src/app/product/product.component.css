@@ -29,14 +29,6 @@ button{
     color: white;
 }
 
-.background{
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 0px 10px;
-    height: 80px;
-    border-bottom: 3px red solid;
-}
-
-
 .backgroundsection{
     background: url("/photos/inner_banner.jpg");
     background-repeat: no-repeat;

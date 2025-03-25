@@ -10,6 +10,14 @@ nav{
     border-bottom: 3px transparent solid;
 }
 
+.background{
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0px 10px;
+    height: 80px;
+    border-bottom: 3px red solid;
+}
+
+
 .fa-car-side{
     color: white;
 }

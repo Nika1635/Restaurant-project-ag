@@ -1,4 +1,4 @@
-<nav id="navigationbar" >
+<nav id="navigationbar" [ngClass]="scrollPosition > 0 ? 'background' : ''">
     <ul class="navbar">
         <li><button id="home" routerLink="/">Home</button></li>
         <li><button id="cart" routerLink="/cart">Cart</button><i class="fa-solid fa-car-side"></i></li>
