@@ -18,4 +18,8 @@ export class ApiService {
   filter(vegetarian: string, nuts: string, spiciness: string, categoriestring: string){
     return this.api.get(`https://restaurant.stepprojects.ge/api/Products/GetFiltered?${vegetarian}${nuts}${spiciness}${categoriestring}`)
   }
+
+  cart(){
+    return this.api.get(`https://restaurant.stepprojects.ge/api/Baskets/GetAll`)
+  }
 }
