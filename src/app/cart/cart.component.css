@@ -1,0 +1,19 @@
+.backgroundsection{
+    background: url("/photos/inner_banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 380px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backgroundsection > h1{
+    font-size: 40px;
+    text-align: center;
+    margin-inline: 25px;
+    font-weight: 600;
+    font-family: Georgia;
+    letter-spacing: 1px;
+}
