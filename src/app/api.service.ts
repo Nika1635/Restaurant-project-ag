@@ -1,11 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
   constructor(public api: HttpClient) {}
+  public isLoading: BehaviorSubject<boolean> = new BehaviorSubject(false)
+ 
+  startLoading() {
+    this.isLoading.next(true)
+  }
+
+  stopLoading() {
+    this.isLoading.next(false)
+  }
 
   getCards(){
     return this.api.get("https://restaurant.stepprojects.ge/api/Products/GetAll")
