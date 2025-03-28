@@ -48,9 +48,6 @@ table{
     width: 100%;
 }
 
-tbody{
-}
-
 tbody > tr:first-child{
     background-color: #F3F3F3;
 }
@@ -116,4 +113,66 @@ td{
     flex-direction: column;
     gap: 40px;
     margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 570px) {
+
+    .productinfo > img{
+        width: 70px;
+    }
+
+    
+    .productinfo > p{
+        font-size: 13px;
+    }
+
+    .productinfo{
+        flex-direction: column-reverse;
+        gap: 0px;
+    }
+
+    .counter{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border: 1px rgb(211, 211, 211) solid;
+        border-radius: 3px;
+        max-width: 50px;
+        padding: 7px;
+        justify-content: center;
+    }
+    
+    .counter > i{
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    td{
+        padding: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero{
+        padding-inline: 5px;
+    }
+
+}
+
+@media only screen and (max-width: 330px) {
+    .counter{
+        gap: 3px;
+        max-width: 40px;
+        padding: 7px;
+        justify-content: center;
+    }
+    
+    .counter > i{
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .counter > p{
+        font-size: 13px;
+    }
 }
