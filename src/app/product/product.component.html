@@ -52,6 +52,10 @@
                                 <p>Vegeterian</p>
                             </div>
                         </div>
+                        <div class="addtocart">
+                            <button (click)="addtocart(1, item.price, item.id)">Add To cart</button>
+                            <p>${{item.price}}</p>
+                        </div>
                     </div>
                 </div>
             }

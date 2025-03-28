@@ -4,7 +4,7 @@
 <section class="cart-hero">
     <div class="hero">
         <h1>Cart</h1>
-        <div>
+        <div class="hero-all">
             <table>
                 <tbody>
                     <tr>
@@ -14,24 +14,33 @@
                         <th>Price</th>
                         <th>Total</th>
                     </tr>
-                    <tr>
-                        <td><i class="fa-solid fa-x"></i></td>
-                        <td>
-                            <img src="" alt="">
-                            <p></p>
-                        </td>
-                        <td>
-                            <div class="counter">
-                                <p>+</p>
-                                <p>0</p>
-                                <p>-</p>
-                            </div>
-                        </td>
-                        <td>$9.5</td>
-                        <td>$9.5</td>
-                    </tr>
+                    @for (item of cart; track $index) {
+                        <tr>
+                            <td><i class="fa-solid fa-x" (click)="deleteproduct(item.product.id, $event)"></i></td>
+                            <td class="productinfo">
+                                <img [src]="item.product.image" alt="">
+                                <p>{{item.product.name}}</p>
+                            </td>
+                            <td>
+                                <div class="counter">
+                                    <i class="fa-solid fa-plus" (click)="plus(item.quantity + 1, item.price, item.product.id, $event)" ></i>
+                                    <p>{{item.quantity}}</p>
+                                    <i class="fa-solid fa-minus" (click)="plus(item.quantity - 1, item.price, item.product.id, $event)"></i>
+                                </div>
+                            </td>
+                            <td>${{item.price}}</td>
+                            <td>${{item.price * item.quantity}}</td>
+                        </tr>
+                    }
                 </tbody>
             </table>
+            <h1>Total: <span>$
+                @if (cart.length > 0) {
+                    {{totall}}
+                }@else {
+                    0
+                }
+            </span></h1>
         </div>
     </div>
 </section>

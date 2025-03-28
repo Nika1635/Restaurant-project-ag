@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-product',
@@ -10,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './product.component.css'
 })
 export class ProductComponent implements OnInit {
-  constructor(private api: ApiService){}
+  constructor(private api: ApiService, private post: PostService){}
 
   ngOnInit(): void {
     this.getcards()
@@ -81,5 +82,14 @@ export class ProductComponent implements OnInit {
     this.api.filter(this.vegetarianstring, this.nutsstring, this.sliderstring, this.categoriestring).subscribe(data => {
       this.products = data
     })
+  }
+
+  addtocart(quantityy: number, pricee: number, prodict: number){
+    let obj = {
+      quantity: quantityy,
+      price: pricee,
+      productId: prodict
+    }
+    this.post.addToCart(obj).subscribe(data => {})
   }
 }

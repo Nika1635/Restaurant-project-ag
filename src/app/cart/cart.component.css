@@ -84,10 +84,36 @@ td{
     justify-content: center;
 }
 
+.counter > i{
+    cursor: pointer;
+    font-size: 12px;
+}
+
 .counter > p{
     cursor: pointer;
 }
 
-.counter > p:last-child{
-    padding-bottom: 3px;
+.productinfo{
+    display: flex;
+    gap: 30px;
+}
+
+.productinfo > img{
+    width: 100px;
+}
+
+.fa-x{
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.fa-x:hover{
+    color: red;
+}
+
+.hero-all{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 100px;
 }

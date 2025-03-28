@@ -54,6 +54,7 @@ button{
     width: 100%;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 60px;
 }
 
 .categories-contaier{
@@ -237,6 +238,35 @@ input[type="range"] {
 #products > div{
     width: 280px;
 }
+
+.addtocart{
+    display: flex;
+    gap: 20px;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.addtocart > p{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.addtocart > button{
+    background-color: transparent;
+    padding-inline: 8px;
+    padding-block: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid rgb(63, 63, 63);
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.addtocart > button:hover{
+    background-color: #E80F0E;
+    color: white;
+}
+
 
 
 

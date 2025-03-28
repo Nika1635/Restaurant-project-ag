@@ -13,8 +13,7 @@ export class NavbarComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.scrollPosition = window.scrollY;
-    console.log('Scroll Position:', this.scrollPosition)
+    this.scrollPosition = window.scrollY
   }
    
 }
